@@ -2,10 +2,10 @@
 title: "Home"
 ---
 
-# Hello _World_ <br>
+<div class="definition-block">
+  <span class="word">anamnesis</span>
+  <span class="phonetic">/ˌænæmˈniːsɪs/</span>
+  <p class="meaning">noun &bull; the remembering of things forgotten; the recollection of innate knowledge.</p>
+</div>
 
-Welcome to my portfolio and blog. I enjoy building systems, experimenting with new technologies, and sharing what I learn.
-
----
-
-This site is my notebook for [practical guides]({{< ref "blogs" >}}) and [projects]({{< ref "projects" >}}). When the terminal is closed, you can find out more about me [here]({{< ref "about" >}}).
+<small>This site logs my college life and CS journey—an act of anamnesis.<br> Here you can find my [blogs]({{< ref "blogs" >}}), [projects]({{< ref "projects" >}}), and story [here]({{< ref "about" >}}).</small>

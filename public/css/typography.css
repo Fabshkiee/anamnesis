@@ -78,7 +78,7 @@ html { font-size: 15px; }
 .prose hr {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .prose h1 { font-size: var(--step-2); }
