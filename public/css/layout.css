@@ -27,8 +27,8 @@
   );
   --grid-column-width: calc(
     (
-        min(100%, var(--grid-max-width)) - (var(--grid-columns) + 1) *
-          var(--grid-gutter)
+        min(100%, var(--grid-max-width)) -
+          (var(--grid-columns) + 1) * var(--grid-gutter)
       ) /
       var(--grid-columns)
   );
@@ -52,7 +52,9 @@ html {
     --bar-nav-height: calc(2rem + 2 * var(--space-2xs) + 2px);
     --bar-toc-height: 0px;
     scroll-padding-block-start: calc(
-      var(--bar-nav-height) + var(--bar-toc-height) + var(--space-2xs)
+      var(--bar-nav-height) +
+      var(--bar-toc-height) +
+      var(--space-2xs)
     );
 
     &:has(page-toc) {
@@ -151,114 +153,20 @@ page-content {
 }
 
 /* Merox Features */
-ul.timeline {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 1.125rem;
+ul.timeline { list-style-type: none; padding: 0; margin: 0 0 1.125rem; }
+ul.timeline li { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; padding: 0.5rem 0 0.5rem 0.5rem; border-bottom: 1px solid var(--border); }
+ul.timeline li:last-child { border-bottom: none; }
+ul.timeline .year { font-size: 0.9375rem; color: var(--muted-foreground); padding-top: 0.125rem; }
+ul.timeline .desc { font-size: 1.125rem; color: var(--foreground); line-height: 1.5; }
+ul.post-list { list-style: none; padding: 0; margin: 0; }
+ul.post-list li { display: grid; grid-template-columns: 4.5rem 1fr auto; gap: 1.125rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+@media (max-width: 640px) { 
+    ul.post-list li { grid-template-columns: 3.5rem 1fr; gap: 0.25rem 0.5rem; } 
+    ul.post-list li .post-year { grid-column: 1; grid-row: 1; }
+    ul.post-list li .post-title { grid-column: 2; grid-row: 1; }
+    ul.post-list li .post-tags { grid-column: 2; grid-row: 2; justify-content: flex-start !important; text-align: left !important; font-size: 0.75rem; } 
 }
-ul.timeline li {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 1rem;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-ul.timeline li:last-child {
-  border-bottom: none;
-}
-ul.timeline .year {
-  font-size: 0.9375rem;
-  color: var(--muted-foreground);
-  padding-top: 0.125rem;
-}
-ul.timeline .desc {
-  font-size: 1.125rem;
-  color: var(--foreground);
-  line-height: 1.5;
-}
-ul.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-ul.post-list li {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr auto;
-  gap: 1.125rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border);
-  align-items: baseline;
-}
-@media (max-width: 640px) {
-  ul.post-list li {
-    grid-template-columns: 3.5rem 1fr;
-    gap: 0.25rem 0.5rem;
-  }
-  ul.post-list li .post-year {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  ul.post-list li .post-title {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  ul.post-list li .post-tags {
-    grid-column: 2;
-    grid-row: 2;
-    justify-content: flex-start !important;
-    text-align: left !important;
-    font-size: 0.75rem;
-  }
-}
-ul.post-list li:last-child {
-  border-bottom: none;
-}
-ul.post-list .post-year {
-  color: var(--muted-foreground);
-  font-size: 0.9375rem;
-  font-family: var(--font-mono);
-}
-ul.post-list .post-title {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--foreground);
-}
-ul.post-list .post-tags {
-  color: var(--muted-foreground);
-  text-align: right;
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-/* Custom Homepage Definition Block Styling */
-.definition-block {
-  margin: 1.25rem auto;
-  text-align: center;
-  max-width: 28rem;
-}
-
-.definition-block .word {
-  font-family: var(--font-mono, monospace);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--foreground);
-}
-
-.definition-block .phonetic {
-  color: var(--muted-foreground);
-  font-size: 0.85rem;
-  margin-left: 0.25rem;
-}
-
-.definition-block .meaning {
-  font-size: 0.88rem;
-  color: var(--muted-foreground);
-  line-height: 1.4;
-  margin: 0.25rem 0 0 0 !important;
-  font-style: italic;
-}
+ul.post-list li:last-child { border-bottom: none; }
+ul.post-list .post-year { color: var(--muted-foreground); font-size: 0.9375rem; font-family: var(--font-mono); }
+ul.post-list .post-title { text-decoration: none; font-weight: 500; color: var(--foreground); }
+ul.post-list .post-tags { color: var(--muted-foreground); text-align: right; font-family: var(--font-mono); font-size: 0.875rem; display: flex; gap: 0.5rem; justify-content: flex-end; flex-wrap: wrap; }
