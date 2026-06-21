@@ -1,10 +1,17 @@
-<p align="center">
-  <h1 align="center">Anamnesis</h1>
-  <div align="center">
-    <img src="static/anamnesis.svg" alt="Anamnesis Logo" width="150" style="color: white; fill: white;"><br>
-    <em>Anamnesis is my personal blog built with <a href="https://gohugo.io">Hugo</a>. As a forgetful person, it serves as my digital notebook<br>to share thoughts, projects, and stories I want to remember</em>
-  </div>
-</p>
+<h1 align="center">Anamnesis</h1>
+
+<div align="center">
+  <picture>
+    <!-- Displayed when user is on GitHub Dark Theme -->
+    <source media="(prefers-color-scheme: dark)" srcset="static/anamnesis-white.svg">
+    <!-- Displayed when user is on GitHub Light Theme -->
+    <source media="(prefers-color-scheme: light)" srcset="static/anamnesis.svg">
+    <!-- Fallback default if picture tags fail -->
+    <img alt="Anamnesis Logo" src="static/anamnesis.svg" width="150">
+  </picture>
+  <br>
+  <em>Anamnesis is my personal blog built with <a href="https://gohugo.io">Hugo</a>. As a forgetful person, it serves as my digital notebook<br>to share thoughts, projects, and stories I want to remember</em>
+</div>
 
 ## Overview
 
