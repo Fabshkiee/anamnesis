@@ -1,13 +1,12 @@
 # Use DecapBridge PKCE auth (required)
 backend:
-  name: git-gateway
+  name: github
   repo: Fabshkiee/anamnesis-my-blog
   branch: main
   auth_type: pkce
   base_url: https://auth.decapbridge.com
   auth_endpoint: /sites/ef8f7cbd-c1d4-4f03-be6a-f301f1ed59a2/pkce
   auth_token_endpoint: /sites/ef8f7cbd-c1d4-4f03-be6a-f301f1ed59a2/token
-  gateway_url: https://gateway.decapbridge.com
 
   # See who did what (optional)
   commit_messages:
