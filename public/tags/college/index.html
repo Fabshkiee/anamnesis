@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>College | Sendo</title>
@@ -132,6 +132,11 @@
   nav ul a:hover,
   nav ul a[aria-current="page"] {
     color: var(--foreground) !important;
+  }
+
+  html[data-theme="dark"] img[src="/anamnesis.svg"] {
+    -webkit-filter: invert(1);
+    filter: invert(1);
   }
 
   html[data-theme="dark"] .icon-moon {
